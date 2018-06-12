@@ -6,8 +6,8 @@ def start_quiz(nb_questions=5, tables=[]):
     y = random.randint(0, 12)
 
     if tables:
-        tables = map(int, tables)
-        y = tables[random.randint(0, len(tables) - 1)]
+	tables = map(int, tables)
+	y = tables[random.randint(0, len(tables) - 1)]
 
     session_state = {
         "x": x,
