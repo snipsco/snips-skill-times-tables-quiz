@@ -2,11 +2,11 @@
 
 ## Intro:
 
-This is a simple game demoing the dialog feature of the snips platforme.
+This is a simple game demoing the dialog features of the snips platform.
 
 You can ask the voice assistant to start a new game with a given number of questions and the table you want to learn.
 
-The assistant will then ask you questions one by one and you tell you when you're right or wrong.
+The assistant will then ask you questions one by one and will tell you when you're right or wrong.
 
 ## Standard Installation:
 
