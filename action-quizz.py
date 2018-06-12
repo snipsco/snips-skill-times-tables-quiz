@@ -29,8 +29,8 @@ def user_request_quiz(hermes, intent_message):
 
     if intent_message.slots.number:
         number_of_questions = intent_message.slots.number.first().value
-    if intent_message.slots.table:
-        tables = [intent_message.slots.table.first().value]
+    if intent_message.slots.tables:
+        tables = [intent_message.slots.tables.first().value]
 
     session_state, sentence = tt.start_quiz(number_of_questions, tables)
 
