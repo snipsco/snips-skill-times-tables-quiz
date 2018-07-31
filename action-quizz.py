@@ -1,3 +1,6 @@
+#!/usr/bin/env python2
+# -*-: coding utf-8 -*-
+
 from hermes_python.hermes import Hermes
 import times_tables as tt
 import json
