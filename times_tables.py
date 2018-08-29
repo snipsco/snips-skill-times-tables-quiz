@@ -45,14 +45,14 @@ def user_does_not_know(session_id, sessions_states):
     session_state = sessions_states.get(session_id)
     answer = session_state["x"] * session_state["y"]
 
-    next_step = _create_next_step("That's ok don't worry, the answer was " + str(answer), session_state)
+    next_step = _create_next_step("That's ok don't worry, the answer to {} times {} is {}.".format(session_state["x"], session_state["y"], answer), session_state)
 
     return next_step["sentence"], next_step["continues"]
 
 
 def terminate_early(sessions_states, session_id):
     remove_session_state(sessions_states, session_id)
-    return "As you wish, the game is over"
+    return "OK. Let's play again soon."
 
 
 def _create_next_step(sentence, session_state):
@@ -99,10 +99,10 @@ def _generate_correction(session_state, user_answer):
     result = x * y
 
     if result == user_answer:
-        sentence = "That's it. Well done."
+        sentence = "Correct !"
         session_state["good"] += 1
     elif result != user_answer:
-        sentence = "Oh no, wrong answer. {} times {} is equal to {}".format(x, y, result)
+        sentence = "No, {} times {} is {}".format(x, y, result)
         session_state["bad"] += 1
 
     return sentence
@@ -117,7 +117,7 @@ def _set_not_none_dict_value(to_update, update):
 
 
 def _create_end_sentence(sentence):
-    return sentence + " The game is over"
+    return sentence + " We're done. Let's play again soon."
 
 
 def _create_question(x, y, intro_sentence=""):
