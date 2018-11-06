@@ -10,9 +10,9 @@ The assistant will then ask you questions one by one and will tell you when you'
 
 ## Standard Installation:
 
-Go to your snips console and create an assistant. In this assistant add the snips official times tables skill.
+Go to your snips console and create an assistant. In this assistant add the snips official times tables app.
 
-If you have the snips platforme already installed you are now able to install your assistant with Sam.
+If you have the snips platforme already installed you are now able to install your assistant with [sam](https://snips.gitbook.io/getting-started/installation).
 
 First run `sam connect` to connect to your raspberry.
 
